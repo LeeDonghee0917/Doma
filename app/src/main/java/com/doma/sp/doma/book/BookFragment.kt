@@ -129,13 +129,10 @@ class BookFragment : Fragment() {
                 }
 
                 override fun onFailure(call: Call<BookJson>, t: Throwable) {//실패시 찍히는 로그
-                    Log.d("test1", BookInfo().toString())
-                    if (t is IOException) {
-                        // Network error
-                        Log.e("test2", "Network error: ${t.message}")
-                    } else {
-                        // Conversion issue (parsing error, etc.)
-                        Log.e("test3", "Conversion issue: ${t.message}")
+                    if (t is IOException) { // 네트워크 오류
+                        Log.e("Network error", "${t.message}")
+                    } else { // 변환 오류
+                        Log.e("Conversion issue", "${t.message}")
                     }
                 }
 

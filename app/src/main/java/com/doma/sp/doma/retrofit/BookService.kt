@@ -3,12 +3,13 @@ package com.doma.sp.doma.retrofit
 import com.doma.sp.doma.data.json.BookJson
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.Query
 
 interface BookService {
     @GET("v3/search/book")
     fun getDailyList(
-        @Query("key") key: String?,
+        @Header("Authorization") KakaoAK : String?,
         @Query("query") query: String?,
         @Query("sort") sort: String,
         @Query("size") size: Int,
