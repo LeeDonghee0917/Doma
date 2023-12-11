@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="plantsPhoto" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="myPlantsProfile" parent="">
+    <style name="bookList" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">20%</item>
     </style>
