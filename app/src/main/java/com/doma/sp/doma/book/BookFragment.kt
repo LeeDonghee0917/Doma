@@ -23,7 +23,7 @@ class BookFragment : Fragment() {
     private var _binding: FragmentBookBinding? = null
     private val binding get() = _binding!!
 
-    private var q = "축구" // 검색어
+    private var q = "" // 검색어
 
     private var b_datas: ArrayList<BookInfo> = ArrayList()
 
