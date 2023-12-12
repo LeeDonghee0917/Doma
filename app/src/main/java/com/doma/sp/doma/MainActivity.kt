@@ -1,11 +1,15 @@
 package com.doma.sp.doma
 
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
 import com.doma.sp.doma.book.BookFragment
 import com.doma.sp.doma.databinding.ActivityMainBinding
 import com.doma.sp.doma.map.MapFragment
 import com.doma.sp.doma.search.SearchFragment
+import java.security.MessageDigest
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
