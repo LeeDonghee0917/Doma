@@ -74,7 +74,7 @@ class SearchFragment : Fragment() {
             return
         }
 
-        RetrofitInstance.api.getDailyList(ApiKey.MY_KEY, query, "latest", 10)
+        RetrofitInstance.api.getDailyList(ApiKey.REST_KEY, query, "latest", 10)
             ?.enqueue(object :
                 Callback<BookJson> {
                 @SuppressLint("SimpleDateFormat")

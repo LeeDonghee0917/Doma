@@ -16,6 +16,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+//        ndk {
+//            abiFilters 'armeabi-v7a', 'arm64-v8a'
+//        }
     }
 
     buildTypes {
@@ -47,6 +51,7 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.gms:play-services-fido:20.1.0")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -70,4 +75,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 
     implementation ("com.github.bumptech.glide:glide:4.12.0")
+
+    implementation ("com.kakao.maps.open:android:2.6.0")
+    implementation ("com.kakao.sdk:v2-all:2.18.0")
 }

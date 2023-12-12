@@ -67,7 +67,7 @@ class BookFragment : Fragment() {
     }
 
     fun setDailyRank() {
-        RetrofitInstance.api.getDailyList(ApiKey.MY_KEY, q, "latest", 10)
+        RetrofitInstance.api.getDailyList(ApiKey.REST_KEY, q, "latest", 10)
             ?.enqueue(object :
                 Callback<BookJson> {
                 @SuppressLint("SimpleDateFormat")
