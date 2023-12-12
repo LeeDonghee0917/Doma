@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".book_info.BookInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -27,7 +30,7 @@
 
         <meta-data
             android:name="com.kakao.vectormap.APP_KEY"
-            android:value="0d2d872f7a6c34b93a35a610337a670c"/>
+            android:value="0d2d872f7a6c34b93a35a610337a670c" />
     </application>
 
 </manifest>

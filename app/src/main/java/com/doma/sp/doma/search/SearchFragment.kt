@@ -11,10 +11,12 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.doma.sp.doma.api.ApiKey
+import com.doma.sp.doma.book_info.BookInfoActivity
 import com.doma.sp.doma.data.BookInfo
 import com.doma.sp.doma.data.json.BookJson
 import com.doma.sp.doma.databinding.FragmentSearchBinding
 import com.doma.sp.doma.retrofit.RetrofitInstance
+import com.doma.sp.doma.util.navigateToBookInfoActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -64,6 +66,12 @@ class SearchFragment : Fragment() {
         smanager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         rvBookSearch.layoutManager = smanager
         rvBookSearch.adapter = slistAdapter
+
+        slistAdapter.itemClick = object : SearchAdapter.ItemClick {
+            override fun onClick(view: View, searchData: BookInfo) {
+                startActivity(BookInfoActivity.bookInfoIntent(context, searchData))
+            }
+        }
 
     }
 
